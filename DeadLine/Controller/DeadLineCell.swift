@@ -36,6 +36,10 @@ class DeadLineCell: UITableViewCell {
                 
                 if (Date() > dataModel.endTime) {
                     self.timerLabel.text = "Deadline Due!!!"
+                    
+                    self.backgroundColorView.frame.size.width = self.frame.width
+                    self.backgroundColorView.backgroundColor = UIColor(red: 1, green: 0, blue: 0, alpha: 1)
+                    
                     timer.invalidate()
                 }
                 else {

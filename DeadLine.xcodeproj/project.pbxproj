@@ -18,7 +18,7 @@
 		632DDA5828DE7C9A00E87B46 /* EditDeadlineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632DDA5728DE7C9A00E87B46 /* EditDeadlineView.swift */; };
 		63D98F5928DD03CC0074AF39 /* DeadLineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D98F5728DD03CC0074AF39 /* DeadLineCell.swift */; };
 		63D98F5A28DD03CC0074AF39 /* DeadLineCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63D98F5828DD03CC0074AF39 /* DeadLineCell.xib */; };
-		63D98F5C28DD0A540074AF39 /* AppEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D98F5B28DD0A540074AF39 /* AppEngine.swift */; };
+		63D98F5C28DD0A540074AF39 /* AppFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D98F5B28DD0A540074AF39 /* AppFunctions.swift */; };
 		63D98F5E28DD0A870074AF39 /* DeadlineRowDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D98F5D28DD0A870074AF39 /* DeadlineRowDataModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -34,7 +34,7 @@
 		632DDA5728DE7C9A00E87B46 /* EditDeadlineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditDeadlineView.swift; sourceTree = "<group>"; };
 		63D98F5728DD03CC0074AF39 /* DeadLineCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeadLineCell.swift; sourceTree = "<group>"; };
 		63D98F5828DD03CC0074AF39 /* DeadLineCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeadLineCell.xib; sourceTree = "<group>"; };
-		63D98F5B28DD0A540074AF39 /* AppEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEngine.swift; sourceTree = "<group>"; };
+		63D98F5B28DD0A540074AF39 /* AppFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFunctions.swift; sourceTree = "<group>"; };
 		63D98F5D28DD0A870074AF39 /* DeadlineRowDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeadlineRowDataModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -70,20 +70,44 @@
 		1F6173C328C00C0300B8887B /* DeadLine */ = {
 			isa = PBXGroup;
 			children = (
+				632DDA5B28DE96A100E87B46 /* Controller */,
+				632DDA5A28DE967E00E87B46 /* Model */,
+				632DDA5928DE965D00E87B46 /* View */,
 				1F6173C428C00C0300B8887B /* AppDelegate.swift */,
 				1F6173C628C00C0300B8887B /* SceneDelegate.swift */,
-				1F6173C828C00C0300B8887B /* ViewController.swift */,
-				1F6173CA28C00C0300B8887B /* Main.storyboard */,
-				63D98F5728DD03CC0074AF39 /* DeadLineCell.swift */,
-				63D98F5828DD03CC0074AF39 /* DeadLineCell.xib */,
 				1F6173CD28C00C0400B8887B /* Assets.xcassets */,
-				1F6173CF28C00C0400B8887B /* LaunchScreen.storyboard */,
 				1F6173D228C00C0400B8887B /* Info.plist */,
-				63D98F5B28DD0A540074AF39 /* AppEngine.swift */,
-				63D98F5D28DD0A870074AF39 /* DeadlineRowDataModel.swift */,
-				632DDA5728DE7C9A00E87B46 /* EditDeadlineView.swift */,
 			);
 			path = DeadLine;
+			sourceTree = "<group>";
+		};
+		632DDA5928DE965D00E87B46 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1F6173CA28C00C0300B8887B /* Main.storyboard */,
+				63D98F5828DD03CC0074AF39 /* DeadLineCell.xib */,
+				1F6173CF28C00C0400B8887B /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		632DDA5A28DE967E00E87B46 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				63D98F5B28DD0A540074AF39 /* AppFunctions.swift */,
+				63D98F5D28DD0A870074AF39 /* DeadlineRowDataModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		632DDA5B28DE96A100E87B46 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1F6173C828C00C0300B8887B /* ViewController.swift */,
+				63D98F5728DD03CC0074AF39 /* DeadLineCell.swift */,
+				632DDA5728DE7C9A00E87B46 /* EditDeadlineView.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -170,7 +194,7 @@
 				1F6173C528C00C0300B8887B /* AppDelegate.swift in Sources */,
 				1F6173C728C00C0300B8887B /* SceneDelegate.swift in Sources */,
 				63D98F5928DD03CC0074AF39 /* DeadLineCell.swift in Sources */,
-				63D98F5C28DD0A540074AF39 /* AppEngine.swift in Sources */,
+				63D98F5C28DD0A540074AF39 /* AppFunctions.swift in Sources */,
 				632DDA5828DE7C9A00E87B46 /* EditDeadlineView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

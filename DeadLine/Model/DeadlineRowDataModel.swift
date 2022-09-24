@@ -46,39 +46,3 @@ class Deadline: Object {
         return formatter.string(from: endTime)
     }
 }
-
-class DeadlineRowDataModel {
-    let startTime: Date
-    let endTime: Date
-    let title: String
-    
-    init(startTime: Date, endTime: Date, title: String) {
-        self.startTime = startTime
-        self.endTime = endTime
-        self.title = title
-    }
-    
-    func getTimeLeft() -> String {
-        let formatter = DateComponentsFormatter()
-
-        formatter.unitsStyle = .abbreviated
-        formatter.zeroFormattingBehavior = .dropAll
-        formatter.allowedUnits = [.day, .hour, .minute, .second]
-        
-        return formatter.string(from: endTime - Date()) ?? ""
-    }
-    
-    func getStartTime() -> String {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "mm/dd/yy"
-        
-        return formatter.string(from: startTime)
-    }
-    
-    func getEndTime() -> String {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "MMM dd, yyyy hh:mm"
-        
-        return formatter.string(from: endTime)
-    }
-}
