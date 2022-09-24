@@ -19,6 +19,8 @@ class EditDeadlineView: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        titleTextField.delegate = self
+        
         if (deadline != nil) {
             datePicker.setDate(deadline!.endTime, animated: false)
             titleTextField.text = deadline?.title
@@ -45,5 +47,12 @@ class EditDeadlineView: UIViewController {
         }
         
         self.performSegue(withIdentifier: "unwindAfterSave", sender: nil)
+    }
+}
+
+extension EditDeadlineView: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
 }
