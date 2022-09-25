@@ -14,6 +14,7 @@ class Deadline: Object {
     @Persisted var startTime: Date
     @Persisted var endTime: Date
     @Persisted var title: String
+    @Persisted var uuid: String?
     
     convenience init(startTime: Date, endTime: Date, title: String) {
         self.init()

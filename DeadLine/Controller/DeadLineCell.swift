@@ -6,8 +6,10 @@
 //
 
 import UIKit
+import RealmSwift
 
 class DeadLineCell: UITableViewCell {
+    let realm = try! Realm()
     
     @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet weak var endTimeLabel: UILabel!
@@ -30,9 +32,20 @@ class DeadLineCell: UITableViewCell {
     
     func startTimer() {
         self.timer?.invalidate()
+        
+        guard let dataModel = self.dataModel else { return }
+        
+        if (dataModel.uuid == nil && dataModel.endTime > Date()) {
+            let uuid = AppFunctions.sendNotification(time: dataModel.endTime - Date(), deadlineTitle: dataModel.title)
+            
+            try! realm.write {
+                dataModel.uuid = uuid
+            }
+        }
+        
         self.timer = Timer.scheduledTimer(withTimeInterval: 1.0/144.0, repeats: true, block: { (timer) in
             DispatchQueue.main.async {
-                guard let dataModel = self.dataModel else { return }
+                
                 
                 if (Date() > dataModel.endTime) {
                     self.timerLabel.text = "Deadline Due!!!"
@@ -60,5 +73,14 @@ class DeadLineCell: UITableViewCell {
     
     func stopTimer() {
         self.timer?.invalidate()
+        
+        guard let dataModel = self.dataModel else { return }
+        
+        if (dataModel.uuid != nil) {
+            AppFunctions.cancelNotification(uuid: dataModel.uuid!)
+            try! realm.write {
+                dataModel.uuid = nil
+            }
+        }
     }
 }

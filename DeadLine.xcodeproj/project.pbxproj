@@ -31,6 +31,7 @@
 		1F6173CD28C00C0400B8887B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1F6173D028C00C0400B8887B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1F6173D228C00C0400B8887B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		632B8C6328E0DD300089643E /* DeadLine.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DeadLine.entitlements; sourceTree = "<group>"; };
 		632DDA5728DE7C9A00E87B46 /* EditDeadlineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditDeadlineView.swift; sourceTree = "<group>"; };
 		63D98F5728DD03CC0074AF39 /* DeadLineCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeadLineCell.swift; sourceTree = "<group>"; };
 		63D98F5828DD03CC0074AF39 /* DeadLineCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeadLineCell.xib; sourceTree = "<group>"; };
@@ -70,6 +71,7 @@
 		1F6173C328C00C0300B8887B /* DeadLine */ = {
 			isa = PBXGroup;
 			children = (
+				632B8C6328E0DD300089643E /* DeadLine.entitlements */,
 				632DDA5B28DE96A100E87B46 /* Controller */,
 				632DDA5A28DE967E00E87B46 /* Model */,
 				632DDA5928DE965D00E87B46 /* View */,
@@ -340,6 +342,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = DeadLine/DeadLine.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = TQ27LL9PXC;
@@ -368,6 +371,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = DeadLine/DeadLine.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = TQ27LL9PXC;
